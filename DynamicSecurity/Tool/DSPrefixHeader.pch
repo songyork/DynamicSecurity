@@ -1,0 +1,98 @@
+//
+//  DSPrefixHeader.pch
+//  DynamicSecurity
+//
+//  Created by SDK on 2017/11/4.
+//  Copyright © 2017年 songyan. All rights reserved.
+//
+
+#ifndef DSPrefixHeader_pch
+#define DSPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* DSPrefixHeader_pch */
+
+#ifdef DEBUG
+
+
+
+
+#define SYLog(...) NSLog(__VA_ARGS__)
+//#define debugMethod() NSLog(@"%s", __func__)
+#else
+#define SYLog(...)
+//#define debugMethod()
+#endif
+
+
+#define SYNavColor [UIColor colorWithRed:0.31 green:0.53 blue:0.90 alpha:1.00]
+#define SYLineColor [UIColor colorWithRed:0.91 green:0.91 blue:0.91 alpha:1.00]
+#define SYNOColor [UIColor clearColor]
+#define SYWhiteColor [UIColor whiteColor]
+#define SYProgressBGColor [UIColor colorWithRed:0.40 green:0.61 blue:0.97 alpha:1.00]
+#define SYImage(image) [UIImage imageNamed:image]
+#define SongYRGB(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define Weak_Self __weak typeof(self) weakSelf = self
+#define Screen_Width [[UIScreen mainScreen] bounds].size.width
+#define Screen_Height [[UIScreen mainScreen] bounds].size.height
+//宽高定义
+#define CircleSelfWidth self.frame.size.width
+#define CircleSelfHeight self.frame.size.height
+
+//角度转换为弧度
+#define CircleDegreeToRadian(d) ((d)*M_PI)/180.0
+
+
+#import <AFNetworking.h>
+#import <UIImageView+WebCache.h>
+#import "MBProgressHUD.h"
+#import <Masonry.h>
+#import "UIView+Extension.h"
+#import "NetworkTool.h"
+#import "SYSingleton.h"
+#import "PublicTool.h"
+#import "KeyChainWrapper.h"
+#import "NSString+SYAttributes.h"
+#import "UserInfo.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+
+
+
+#import "OTPAuthURL.h"
+#import "HOTPGenerator.h"
+#import "TOTPGenerator.h"
+#import "GTMNSDictionary+URLArguments.h"
+#import "GTMNSString+URLArguments.h"
+#import "GTMStringEncoding.h"
+
+#import "UserCenterModel.h"
+#import "AddModel.h"
+#import <WebKit/WebKit.h>
+
+#define APP_Version @"v1.0.2"
+
+
+#define SY_URL_Head @"https://syapp.shangshiwl.com/?"//请求头部
+
+#define SY_URL_Message @"https://syapp.shangshiwl.com/?ct=Sys&ac=sendSms"// 验证码接口
+
+#define SY_API_KEY @"ksd8*W23nK&^G12rK"//签名
+
+#define SY_Secret_Key @"sy_secret_key"//secret
+
+#define SYUsernameKey @"SYUsernameKey" //存的数组，保存账号；
+#define SYPasswordKey @"SYPasswordKey" //存的字典，保存所有的账号、密码
+#define SY_fastLogin @"SY_fastLogin" //保存快速登录的账号、密码
+#define SY_UserName_Fast @"SY_UserName_Fast"
+#define SY_Password_Fast @"SY_Password_Fast"
+#define SY_UserLogin_Auto @"SY_UserName_Auto"
+
+
+
+
+
+
+
